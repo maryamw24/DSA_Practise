@@ -57,6 +57,6 @@ def CalculatePower(x,n):
         return 1
     if x == 0 :# Base Case2
         return 0
-    if(n % 2 == 0): return CalculatePower(x,n/2) * CalculatePower(x, n/2)
-    else : return CalculatePower(x,n//2) * CalculatePower(x, n//2) * x
+    if(n % 2 == 0): return CalculatePower(x,n//2) * CalculatePower(x, n//2)
+    else : return CalculatePower(x,n//2) * CalculatePower(x, n/CalculatePower//2) * x
 print(CalculatePower(2,3))
