@@ -1,4 +1,4 @@
-#========================= INTERMEDIATE PROBLEMS ===============================#
+#                Famous game Tower oof Hanoi Solution given
 #
 #----------------------------- Tower Of Hanoi ----------------------------------#
 def TowerOfHanoi(n, src, hel, des):
