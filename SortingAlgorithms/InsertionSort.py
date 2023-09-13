@@ -9,13 +9,13 @@
 #   * these cards were originally the top cards of the pile on the table
 
 # Code
-def insertiionSort(Arr):
+def insertionSort(Arr):
     for i in range(1, len(Arr)):
         current = Arr[i]
         j = i-1
         while(j >= 0 and current < Arr[j]):
             Arr[j+1] = Arr[j]
-            j= j-1
+            j -= 1
         Arr[j+1] = current
     return Arr
-print(insertiionSort([2,4,3,5,1,6,0,7,8]))
+print(insertionSort([2,4,3,5,1,6,0,7,8]))
