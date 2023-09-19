@@ -1,3 +1,15 @@
+
+#----------------------- Hybrid Merge Sort ------------------#
+#
+# Steps involved:
+# - First the array is divided into the smaller parts untill the size of array become 
+#   equal to threshold value.
+# - When it becomes equal a particular condition is satisfied and the part of the array 
+#   sent to the insertion sort function which then performs sorting
+# - Then at last all the parts are being connected by merge function and the resulting
+#   array will be sorted.
+
+# Code 
 def insertionSort(Arr, start, end):
     for i in range(start+1, end):
         current = Arr[i]
@@ -42,5 +54,3 @@ def Merge(Arr,start,mid,end):
         Arr[k] = R[j] 
         j+=1
         k+=1
-
-print(hybridmergeSort([2,4,6,5,0,-1,19,10,-10,12, 25, 16],0,12,4))

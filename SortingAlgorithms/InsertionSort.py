@@ -8,7 +8,9 @@
 # - The cards held in the left hand are sorted
 #   * these cards were originally the top cards of the pile on the table
 
-# Code
+# Time Complexity : n^2
+
+# Code implemented to sort the whole array
 def insertionSort(Arr):
     for i in range(1, len(Arr)):
         current = Arr[i]
@@ -18,4 +20,14 @@ def insertionSort(Arr):
             j -= 1
         Arr[j+1] = current
     return Arr
-print(insertionSort([2,4,3,5,1,6,0,7,8]))
+
+# Code implemented to sort the whole array
+def InsertionSort(Arr, start, end):
+    for i in range(start+1, end+1):
+        current = Arr[i]
+        j = i-1
+        while (j >= start and current < Arr[j]):
+            Arr[j+1] = Arr[j]
+            j -= 1
+        Arr[j+1] = current
+    return Arr

@@ -1,7 +1,13 @@
-import time 
-import funcs as f
 
-#----------------------------- Problem 3
+#------------------------------- Merge Sort ----------------------------#
+#
+# Steps involved
+# - The array is divided into halves(first the left half and then right) untill only single unit is left.
+# - That single unit is already sorted.
+# - The merge function merges the array by comparing the numbers and the resulting array is sorted.
+
+# Time Complexity : nlogn
+
 def MergeSort(Arr, start, end):
     if start<end:
         mid = (start + end )//2
