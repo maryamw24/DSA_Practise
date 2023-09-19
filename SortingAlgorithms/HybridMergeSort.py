@@ -6,21 +6,17 @@ def insertionSort(Arr, start, end):
             Arr[j+1] = Arr[j]
             j -= 1
         Arr[j+1] = current
-    return Arr
 
 
 def hybridmergeSort(Arr, start, end, t):
     mid = (start + end )//2 
     if(end- start)+1 >  t:
-       
         hybridmergeSort(Arr, start, mid,t)
         hybridmergeSort(Arr, mid+1,end,t)
        
     else:
        insertionSort(Arr, start, end)
     Merge(Arr,start, mid, end)
-   
-    return Arr
 
 
 def Merge(Arr,start,mid,end):
