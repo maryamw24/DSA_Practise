@@ -1,41 +1,39 @@
-
 #------------------------------- Merge Sort ----------------------------#
 #
-# Steps involved
-# - The array is divided into halves(first the left half and then right) untill only single unit is left.
-# - That single unit is already sorted.
-# - The merge function merges the array by comparing the numbers and the resulting array is sorted.
+# Steps
+# - We have to use the divide and conquer technique.
+# - First we have to divide the array into left and right arrays untill only single unit is left in the array.
+# - then we will merfe then arrays also applying the sorting algoritm.
 
-# Time Complexity : nlogn
+# Code
+def mergeSort(Arr):
+    n = len(Arr)
+    if(n <= 1):
+        return Arr
+    else:
+        Left = mergeSort(Arr[0:n//2])
+        Right = mergeSort(Arr[n//2: n])
+        return Merge(Right, Left)
 
-def MergeSort(Arr, start, end):
-    if start<end:
-        mid = (start + end )//2
-        MergeSort(Arr, start, mid)
-        MergeSort(Arr, mid+1,end)
-        Merge(Arr,start, mid, end)
-    return Arr
-
-def Merge(Arr,start,mid,end):
-    L = Arr[start:mid+1]
-    R = Arr[mid+1:end+1]
+def Merge(L,R):
+    A = []
     i = 0
     j = 0
-    k = start
+    k = 0
     while i < len(L) and j < len(R):
-        if(L[i]< R[j]):
-            Arr[k] = L[i]
+        if(L[i]< R[j]): 
+            A.append( L[i])
             i+=1
         else: 
-            Arr[k]=R[j]
+            A.append(R[j])
             j+=1
-        k+=1
 
     while i < len(L):
-        Arr[k] = L[i]
+        A.append(L[i])
         i+=1
-        k+=1
     while j < len(R):
-        Arr[k] = R[j] 
+        A.append(R[j])
         j+=1
-        k+=1
+    return A
+
+print(mergeSort([2,4,1,3,6,5,0,8]))
