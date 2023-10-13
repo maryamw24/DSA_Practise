@@ -27,7 +27,7 @@ def InsertionSort(Arr, start, end):
         current = Arr[i]
         j = i-1
         while (j >= start and current < Arr[j]):
-            Arr[j+1] = Arr[j]
+            Arr[j,+1] = Arr[j]
             j -= 1
         Arr[j+1] = current
     return Arr
